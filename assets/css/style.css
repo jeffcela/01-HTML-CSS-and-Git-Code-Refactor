@@ -1,6 +1,11 @@
-:root {}
+/* Global styling for page */
+:root {
+    --white: #ffffff;
+    --TreMS: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --Gill_San: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-/* applying to the entire page */
+/* Applying to the entire page */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,13 +18,14 @@ body {
 
 header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--TreMS);
     background-color: #2a607c;
-    color: #ffffff;
+    color: var(--white);
 }
 header h1 {
     display: inline-block;
-    font-size: 48px; 
+    font-size: 48px;
+    color: var(--white); 
 }
 
 header h1 .seo {
@@ -30,7 +36,7 @@ header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--Gill_San);
     font-size: 20px;
 }
 
@@ -42,16 +48,16 @@ header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
-
+/* styling for paragraph and links */
 a {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
 }
 
 p {
     font-size: 16px;
 }
-
+/* background image between header and main containers */
 .hero {
     height: 800px;
     width: 100%;
@@ -60,7 +66,7 @@ p {
     background-size: cover;
     background-position: center;
 }
-
+/* styling for main container */
 .float-left {
     float: left;
     margin-right: 25px;
@@ -77,63 +83,60 @@ p {
     margin-left: 20px;
 }
 
-.benefits {
+.rows {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: var(--Gill_San);
+    background-color: #0072bb;
+    color: var(--white);
+}
+
+.rows img {
+    max-height: 200px;
+}
+
+.rows h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Styling for aside container */
+.benefit {
     margin-right: 20px;
     padding: 20px;
     clear: both;
     float: right;
     width: 20%;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--Gill_San);
     background-color: #2589bd;
 }
 
-/* Each of the sections under the main attribute are labeled seperate to allow for individual styling in future updates */
-
-.search-engine-optimization .online-reputation-management .social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization .online-reputation-management .social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization .online-reputation-management .social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-/* Each of the sections under the aside attribute are labeled seperate to allow for individual styling in future updates */
-
-.benefit-cost .benefit-lead .benefit-brand {
+.aside-section {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
-.benefit-lead  .benefit-lead .benefit-brand h3 {
+.benefit h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-lead  .benefit-lead .benefit-brand img {
+.aside-section img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-/* Applying style to the footer */
-.footer {
+/* Footer style */
+footer {
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--TreMS);
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-size: 20px;
 }
